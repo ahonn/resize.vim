@@ -1,0 +1,39 @@
+*resize.txt*      Resize the window screen
+
+CONTENTS                                        *resize-contents*
+Introduction                                    |resize-introduction|
+Variables                                       |resize-variables|
+Commands                                        |resize-commands|
+==============================================================================
+INTRODUCTION                                    *resize-introduction*
+This plugin is used for resize a vertical or horizontal split screen.
+Different from the <c-w>+/- and <c-w>>/<, resize.vim more clever. By default,
+the plugin use <shift-{arrow}]> to resize.
+
+==============================================================================
+VARIABLES                                       *resize-variables*
+
+g:resize_size                                   *g:resize_size*
+                Resize step size.
+                Default value is 1.
+
+g:resize_disable_mappings                       *g:resize_disable_mappings*
+                Disable default key bindings.
+                Default value is 0.
+
+==============================================================================
+COMMANDS                                         *resize-commands*
+*ResizeUp*
+                By default, <S-Up> movement.
+
+*ResizeDown*
+                By default, <S-Down> movement.
+
+*ResizeLeft*
+                By default, <S-Left> movement.
+
+*ResizeRight*
+                By default, <S-Right> movement.
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl
