@@ -1,5 +1,5 @@
 " resize.vim - Resize the window screen
-" Author:      Ahonn <ahonn95@outlook.com>
+" Author:      Richard Jiang <ahonn95@outlook.com>
 " Version:     1.0
 
 if !exists("g:resize_size")
@@ -9,7 +9,7 @@ endif
 let s:pos_size = "+".g:resize_size
 let s:neg_size = "-".g:resize_size
 
-let s:switch_cmd = {
+let s:switch_window_cmd = {
   \ "right": "\<C-w>l",
   \ "left": "\<C-w>h",
   \ "top": "\<C-w>k",
@@ -18,7 +18,7 @@ let s:switch_cmd = {
 
 function! s:get_direction(position)
   let this = winnr()
-  let cmd = s:switch_cmd[a:position]
+  let cmd = s:switch_window_cmd[a:position]
   silent! execute "normal! ".cmd
   let next = winnr()
   silent! execute this."wincmd w"
